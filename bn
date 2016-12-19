@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int bn (int a, int n) {
+	if (n==0)
+		return 1;
+	if (n%2==0) {
+		int b = bn (a, n/2);
+		return b*b;
+	}
+		else
+		return bn (a, n-1) * a;
+}
+int main() {
+int a,n;
+cin>>a;
+cin>>n;
+cout<<bn (a,n);
+return 0;
+}
