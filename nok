@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int NOD(int a,int b)
+{
+    if(a!=0)
+        return NOD(b%a,a);
+    else
+        return b;
+}
+
+int NOK(int a,int b)
+{
+    return(a*b/NOD(a,b));
+}
+
+int main()
+{
+    int a,b;
+    cin >>a;
+    cin >>b;
+    cout <<"NOK is: "<<NOK(a,b)<<endl;
+    return 0;
+}
