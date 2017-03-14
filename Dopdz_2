@@ -7,10 +7,10 @@ int main()
 int n;
 cin >> n;
 
-int **P=new int[n];
+int **P=new int*[n];
 for(int i=0; i<n; i++)
 {
-int *P[i]=new int[n];
+P[i]=new int[n];
 }
 int t=n/2+1;
 for(int i=0; i<t; i++)
@@ -59,7 +59,7 @@ for(int i=0; i<n; i++)
 {
 delete [] P[i];
 }
-delete [] P
+delete [] P;
 
 return 0;
 }
