@@ -1,3 +1,5 @@
+#include <iostream>
+using namespace std;
 void Dopdz_5(int* a, int n){
 
     int s=0;
@@ -14,6 +16,5 @@ void Dopdz_5(int* a, int n){
     {
         b[i]=a[i];
     }
-    delete [] a;
     a=b;
 }
