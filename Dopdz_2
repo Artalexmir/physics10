@@ -12,16 +12,16 @@ for(int i=0; i<n; i++)
 {
 P[i]=new int[n];
 }
-int t=n/2+1;
+int t=n/2;
 for(int i=0; i<t; i++)
 {
 for(int j=0; j<t; j++)
 {
 if (j>=i) P[i][j]=i+1;
 else P[i][j]=j+1;
-P[i][n-j]=P[i][j];
-P[n-i][j]=P[i][j];
-P[n-i][n-j]=P[i][j];
+P[i][n-(j+1)]=P[i][j];
+P[n-(i+1)][j]=P[i][j];
+P[n-(i+1)][n-(j+1)]=P[i][j];
 }
 }
 
@@ -32,9 +32,9 @@ if(n%2 == 1)
 for(int i=0; i<t; i++)
 {
 P[i][t]=i+1;
-P[n-i][t]=P[i][t];
+P[n-(i+1)][t]=P[i][t];
 P[t][i]=P[i][t];
-P[t][n-i]=P[i][t];
+P[t][n-(i+1)]=P[i][t];
 }
 P[t][t]=t;
 }
