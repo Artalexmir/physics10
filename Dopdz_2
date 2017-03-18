@@ -36,7 +36,7 @@ P[n-(i+1)][t]=P[i][t];
 P[t][i]=P[i][t];
 P[t][n-(i+1)]=P[i][t];
 }
-P[t][t]=t;
+P[t][t]=t+1;
 }
 
 for(int k=0; k < 2; k++)
