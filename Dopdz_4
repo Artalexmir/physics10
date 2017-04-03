@@ -3,9 +3,9 @@ using namespace std;
 int M(int* A, int a, int b, int n){
 int x=a;
 int y=b;
-int m=A[n/2+1];
+int m=A[n/2];
 int p;
-if(x==n)
+if(x==n/2)
 {
    p=A[a];
    for(int i=a; i<x; i++)
@@ -17,7 +17,7 @@ if(x==n)
    }
    return p;
 }
-if(y==n)
+if(y==n/2)
 {
    p=A[y];
    for(int i=y; i<b; i++)
