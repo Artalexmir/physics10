@@ -8,9 +8,9 @@ int p;
 if(x==n/2)
 {
    p=A[a];
-   for(int i=a; i<x; i++)
+   for(int i=a; i<y; i++)
    {
-       if(A[i]<A[i+1])
+       if(A[i]>A[i+1])
        {
            p=A[i+1];
        }
@@ -20,11 +20,11 @@ if(x==n/2)
 if(y==n/2)
 {
    p=A[y];
-   for(int i=y; i<b; i++)
+   for(int i=y; i>a; i--)
    {
-       if(A[i]>A[i+1])
+       if(A[i]<A[i-1])
        {
-           p=A[i+1];
+           p=A[i-1];
        }
    }
    return p;
